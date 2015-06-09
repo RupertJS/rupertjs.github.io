@@ -46,20 +46,39 @@
 	<hr />
 	<div class="row content-section">
 		<div class="col-xs-12">
-			<h2>The Basics</h2>
+			<h2 id="basic">The Basics</h2>
 			<p class="lead">In this basic example, Rupert is told to render all code in <code>./src/client</code> as a single page application, and serve the resulting static assets.</p>
 		</div>
 	</div>
 	<div class="row">
 		<div class="col-xs-8">
-			<ul class="nav nav-tabs">
-				<li class="active"><a href="#">package.json</a></li>
-				<li><a href="#">app.js</a></li>
-				<li><a href="#">src/client/index.html</a></li>
-				<li><a href="#">src/client/main.js</a></li>
+			<ul class="nav nav-tabs" role="tablist">
+				<li role="presentation" class="active"><a href="#basic" aria-controls="basic_package" role="tab" data-toggle="tab" data-target="#basic_package">package.json</a></li>
+				<li role="presentation"><a href="#basic" aria-controls="basic_app" role="tab" data-toggle="tab" data-target="#basic_app">app.js</a></li>
+				<li role="presentation"><a href="#basic" aria-controls="basic_index" role="tab" data-toggle="tab" data-target="#basic_index">src/client/index.html</a></li>
+				<li role="presentation"><a href="#basic" aria-controls="basic_main" role="tab" data-toggle="tab" data-target="#basic_main">src/client/main.js</a></li>
 			</ul>
-			<script src="https://gist.github.com/DavidSouther/dd843dc33acbc9bcb25f.js"></script>
+
+			<!-- Tab panes -->
+			<div class="tab-content">
+				<div role="tabpanel" class="tab-pane active" id="basic_package">
+					<script src="https://gist.github.com/DavidSouther/dd843dc33acbc9bcb25f.js?file=package.json"></script>
+				</div>
+				<div role="tabpanel" class="tab-pane" id="basic_app">
+					<script src="https://gist.github.com/DavidSouther/dd843dc33acbc9bcb25f.js?file=app.js"></script>
+				</div>
+				<div role="tabpanel" class="tab-pane" id="basic_index">
+					<script src="https://gist.github.com/DavidSouther/dd843dc33acbc9bcb25f.js?file=index.html"></script>
+				</div>
+				<div role="tabpanel" class="tab-pane" id="basic_main">
+					<script src="https://gist.github.com/DavidSouther/dd843dc33acbc9bcb25f.js?file=main.js"></script>
+				</div>
+			</div>
+
 		</div>
+
+
+
 		<div class="col-xs-4">
 			<p>App, running on Heroku?</p>
 		</div>
@@ -68,20 +87,38 @@
 	<hr />
 	<div class="row content-section">
 		<div class="col-xs-12">
-			<h2>Simple API</h2>
+			<h2 id="api">Simple API</h2>
 			<p class="lead">Rupert loads the API routes in <code>./src/server</code> and remembers the people introduced.</p>
 		</div>
 	</div>
 	<div class="row">
 		<div class="col-xs-8">
-			<ul class="nav nav-tabs">
-				<li class="active"><a href="#">package.json</a></li>
-				<li><a href="#">app.js</a></li>
-				<li><a href="#">src/client/index.html</a></li>
-				<li><a href="#">src/client/main.js</a></li>
-				<li><a href="#">src/server/route.js</a></li>
+			<ul class="nav nav-tabs" role="tablist">
+				<li role="presentation" class="active"><a href="#api" aria-controls="api_package" role="tab" data-toggle="tab" data-target="#api_package">package.json</a></li>
+				<li role="presentation"><a href="#api" aria-controls="api_app" role="tab" data-toggle="tab" data-target="#api_app">app.js</a></li>
+				<li role="presentation"><a href="#api" aria-controls="api_index" role="tab" data-toggle="tab" data-target="#api_index">src/client/index.html</a></li>
+				<li role="presentation"><a href="#api" aria-controls="api_main" role="tab" data-toggle="tab" data-target="#api_main">src/client/main.js</a></li>
+				<li role="presentation"><a href="#api" aria-controls="api_route" role="tab" data-toggle="tab" data-target="#api_route">src/server/route.js</a></li>
 			</ul>
-			<script src="https://gist.github.com/DavidSouther/501ae1368bee62025a75.js"></script>
+
+			<!-- Tab panes -->
+			<div class="tab-content">
+				<div role="tabpanel" class="tab-pane active" id="api_package">
+					<script src="https://gist.github.com/DavidSouther/501ae1368bee62025a75.js?file=package.json"></script>
+				</div>
+				<div role="tabpanel" class="tab-pane" id="api_app">
+					<script src="https://gist.github.com/DavidSouther/501ae1368bee62025a75.js?file=app.js"></script>
+				</div>
+				<div role="tabpanel" class="tab-pane" id="api_index">
+					<script src="https://gist.github.com/DavidSouther/501ae1368bee62025a75.js?file=index.html"></script>
+				</div>
+				<div role="tabpanel" class="tab-pane" id="api_main">
+					<script src="https://gist.github.com/DavidSouther/501ae1368bee62025a75.js?file=main.js"></script>
+				</div>
+				<div role="tabpanel" class="tab-pane" id="api_route">
+					<script src="https://gist.github.com/DavidSouther/501ae1368bee62025a75.js?file=route.js"></script>
+				</div>
+			</div>
 		</div>
 		<div class="col-xs-4">
 			<p>App, running on Heroku?</p>
@@ -89,6 +126,7 @@
 	</div>
 
 </div>
+<script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
 </body>
 </html>
