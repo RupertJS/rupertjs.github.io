@@ -41,10 +41,15 @@
             <li><a href="#provider">Providers</a></li> -->
           </ul>
         </li>
-				<!-- Starter Projects
-					Bare
-					Vanilla
-					Angular -->
+        <li class="dropdown">
+          <a href="#starters" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Starter Projects <span class="caret"></span></a>
+          <ul class="dropdown-menu" role="menu">
+            <li><a href="#bare">Bare</a></li>
+            <li><a href="#vanilla">Vanilla</a></li>
+            <!-- <li><a href="#angular">Angular</a></li>
+            <li><a href="#provider">Providers</a></li> -->
+          </ul>
+        </li>
       </ul>
 
       <ul class="nav navbar-nav navbar-right">
@@ -66,7 +71,7 @@
 				</div>
 				<p>Rupert streamlines Single Page Application, Microservice Backed architectures. Javascript from top to bottom, your team can focus on building immersive experiences, while seamlessly orchestrating a myriad of backend services.
 					<!-- While Rupert itself provides tools to create both SPAs and backend APIs, its flexible and powerful plugin architecture provides ways to quickly configure your client side framework, manage database connections, and integrate with numerous service providers. -->
-					<!--Additionally, <a href="https://github.com/RupertJS/rupert-grunt#rupert-grunt">Rupert Grunt<a/> provides a complete testing environment for your Rupert code, and <a href="https://github.com/RupertJS/rupert-doorman#rupert-doorman">Rupert Doorman streamlines user management through third-party authentication services.-->
+					<!-- Additionally, <a href="https://github.com/RupertJS/rupert-grunt#rupert-grunt">Rupert Grunt<a/> provides a complete testing environment for your Rupert code, and <a href="https://github.com/RupertJS/rupert-doorman#rupert-doorman">Rupert Doorman streamlines user management through third-party authentication services. -->
 				</p>
 			</div>
 		</div>
@@ -76,32 +81,39 @@
 
 <div class="container">
 	<div class="row">
-		<div class="col-sm-4">
+		<div class="col-xs-4">
 			<h3 class="text-center">Why Rupert?</h3>
 			<p>Rupert comes configured for all common frond-edge scenarios. Using Rupert as a project base will save you time and effort getting a project started, maintaining critical updates, and deploying to your final infrastructure.</p>
 		</div>
-		<div class="col-sm-4">
+		<div class="col-xs-4">
 			<h3 class="text-center">Alternatives</h3>
 			<p>Some tools focus specifically on one aspect of the front-edge development system. Others create unmaintainable webs of copy-pasted configuration and connection files. Rupert chooses the best defaults, while getting out of the way when you want control.</p>
 		</div>
-		<div class="col-sm-4">
+		<div class="col-xs-4">
 			<h3 class="text-center">Plugins</h3>
 			<p>Rupert’s powerful plugin and configuration system allow any tool to intelligently and effortlessly tie in to the Rupert client and server components. Plugins exist both for common front-end frameworks like <a href="https://github.com/RupertJS/rupert-plugin-bootstrap#rupert-bootstrap-configurations">Bootstrap</a> and <a href="https://github.com/RupertJS/rupert-plugin-angular#rupert-angular-configurations">Angular</a>, as well as database tools like <a href="https://github.com/RupertJS/rupert-plugin-mongo#rupert-plugin-mongo">MongoDB</a>.</p>
 		</div>
 	</div>
+</div>
 
-	<div class="row content-section">
-		<div class="col-sm-12">
-			<h2 id="examples">Examples</h3>
-			<p class="lead">These examples show minimal Rupert applications that do interesting things. Starting with a hello world, the examples add a backend API, data persistence, and integration with a third-party authentication library.</p>
+<hr />
+<div class="jumbotron">
+	<div class="container">
+		<div class="row content-section">
+			<div class="col-sm-12">
+				<h2 id="examples">Examples</h3>
+				<p class="lead">These examples show minimal Rupert applications that do interesting things. Starting with a hello world, the examples add a backend API, data persistence, and integration with a third-party authentication library.</p>
+			</div>
 		</div>
 	</div>
+</div>
 
-	<hr />
+<div id="basic"></div>
+<div class="container">
 	<div class="row content-section">
 		<div class="col-sm-12">
-			<h3 id="basic">The Basics</h3>
-			<p class="lead">In this basic example, Rupert is told to render all code in <code>./src/client</code> as a single page application, and serve the resulting static assets.</p>
+			<h3>The Basics</h3>
+			<p class="lead">Rupert is told to render all code in <code>./src/client</code> as a single page application, and serves the resulting static assets.</p>
 		</div>
 	</div>
 	<div class="row">
@@ -113,7 +125,6 @@
 				<li role="presentation"><a href="#basic" aria-controls="basic_main" role="tab" data-toggle="tab" data-target="#basic_main">src/client/main.js</a></li>
 			</ul>
 
-			<!-- Tab panes -->
 			<div class="tab-content">
 				<div role="tabpanel" class="tab-pane active" id="basic_package">
 					<script src="https://gist.github.com/DavidSouther/dd843dc33acbc9bcb25f.js?file=package.json"></script>
@@ -136,11 +147,26 @@
 		</div>
 	</div>
 
+	<div id="api"></div>
 	<hr />
 	<div class="row content-section">
 		<div class="col-sm-12">
-			<h3 id="api">Simple API</h3>
+			<h3>Simple API</h3>
 			<p class="lead">Rupert loads the API routes in <code>./src/server</code> and remembers the people introduced.</p>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-xs-4">
+			<h4 class="text-center">HTML, JS, CSS</h4>
+			<p>Everything in Rupert uses the HTML, Javascript, and CSS technologies your team knows. Any library not available with Rupert can be included via CDN.</p>
+		</div>
+		<div class="col-xs-4">
+			<h4 class="text-center">Express JS</h4>
+			<p>Rupert uses the powerful and flexible <a href="http://expressjs.com/">ExpressJS</a> platform. Rupert handles all configuration for express, including logging and TLS.</p>
+		</div>
+		<div class="col-xs-4">
+			<h4 class="text-center">API Focused</h4>
+			<p>Your team can focus on writing just your application's API. As the project grows to include other platforms, rest easy knowing you already have a scalable data API.</p>
 		</div>
 	</div>
 	<div class="row">
@@ -153,7 +179,6 @@
 				<li role="presentation"><a href="#api" aria-controls="api_route" role="tab" data-toggle="tab" data-target="#api_route">src/server/route.js</a></li>
 			</ul>
 
-			<!-- Tab panes -->
 			<div class="tab-content">
 				<div role="tabpanel" class="tab-pane active" id="api_package">
 					<script src="https://gist.github.com/DavidSouther/501ae1368bee62025a75.js?file=package.json"></script>
