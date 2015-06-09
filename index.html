@@ -9,7 +9,50 @@
 
 	<link rel="stylesheet" href="styles.css">
 </head>
-<body>
+
+<body data-spy="scroll" data-target="#navbar-main">
+
+<nav class="navbar navbar-inverse navbar-fixed-top">
+  <div class="container">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-main">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">
+        <img class="brand" src="https://cdn.rawgit.com/RupertJS/rupert/master/src/assets/logos/Rupert.svg" type="image/svg+xml" />
+				<!-- RupertJS -->
+      </a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="navbar-main">
+      <ul class="nav navbar-nav">
+        <li><a href="#overview">Overview</a></li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Examples <span class="caret"></span></a>
+          <ul class="dropdown-menu" role="menu">
+            <li><a href="#basic">Basic</a></li>
+            <li><a href="#api">API</a></li>
+            <!-- <li><a href="#storage">Storage</a></li>
+            <li><a href="#provider">Providers</a></li> -->
+          </ul>
+        </li>
+				<!-- Starter Projects
+					Bare
+					Vanilla
+					Angular -->
+      </ul>
+
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="https://github.com/RupertJS/rupert" target="_new">Fork on Github</a></li>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
 
 <div class="jumbotron">
 	<div class="container">
@@ -27,6 +70,7 @@
 			</div>
 		</div>
 	</div>
+	<div id="overview"></div>
 </div>
 <div class="container">
 	<div class="row">
@@ -44,7 +88,7 @@
 		</div>
 	</div>
 
-	<hr />
+	<hr id="examples" />
 	<div class="row content-section">
 		<div class="col-sm-12">
 			<h2 id="basic">The Basics</h2>
