@@ -19,7 +19,7 @@
 	fill: #EFB754;
 }
 
-@media screen and max-width (300px){
+@media screen and (max-width: 200px){
 	.detail {
 		display: none;
 	}
