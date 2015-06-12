@@ -39,7 +39,7 @@
             <li><a href="#basic">Basic</a></li>
             <li><a href="#api">API</a></li>
             <li><a href="#mongo">Storage</a></li>
-            <!-- <li><a href="#provider">Providers</a></li> -->
+            <li><a href="#auth">Authentication</a></li>
           </ul>
         </li>
         <li class="dropdown">
@@ -257,6 +257,61 @@
 		</div>
 		<div class="col-md-4">
 			<iframe src="https://rupert-ghpages-example-mongo.herokuapp.com/" height="275px"></iframe>
+		</div>
+	</div>
+
+	<div id="auth"></div>
+	<hr />
+	<div class="row content-section">
+		<div class="col-sm-12">
+			<h3>Rupert Doorman</h3>
+			<p class="lead">Rupert doorman is a core module to handle third-party and integrated user authentication workflows. Simply install the appropriate passport providers, and add your client secrets to the Rupert configuration.</p>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-xs-4">
+			<h4 class="text-center">Passport Providers</h4>
+			<p>Building on the popular <a href="http://passportjs.org/">Passport</a> library, you can use any supported authentication strategy.</p>
+		</div>
+		<div class="col-xs-4">
+			<h4 class="text-center">Storage</h4>
+			<p>Provide your own storage mechanism, do extend and enhance user management in a way that works best for your application's logic.</p>
+		</div>
+		<div class="col-xs-4">
+			<h4 class="text-center">More soon!</h4>
+			<p>This is the freshest piece of Rupert - expect to see streamlined storage mechanisms and improved strategy integration soon!</p>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-8">
+			<ul class="nav nav-tabs" role="tablist">
+				<li role="presentation" class="active"><a href="#mongo" aria-controls="auth_package" role="tab" data-toggle="tab" data-target="#auth_package">package.json</a></li>
+				<li role="presentation"><a href="#mongo" aria-controls="auth_app" role="tab" data-toggle="tab" data-target="#auth_app">app.js</a></li>
+				<li role="presentation"><a href="#mongo" aria-controls="auth_index" role="tab" data-toggle="tab" data-target="#auth_index">src/client/index.html</a></li>
+				<li role="presentation"><a href="#mongo" aria-controls="auth_main" role="tab" data-toggle="tab" data-target="#auth_main">src/client/main.js</a></li>
+				<li role="presentation"><a href="#mongo" aria-controls="auth_route" role="tab" data-toggle="tab" data-target="#auth_route">src/server/route.js</a></li>
+			</ul>
+
+			<div class="tab-content">
+				<div role="tabpanel" class="tab-pane active" id="auth_package">
+					<script src="https://gist.github.com/DavidSouther/3813d37375bd072f8bae.js?file=package.json"></script>
+				</div>
+				<div role="tabpanel" class="tab-pane" id="auth_app">
+					<script src="https://gist.github.com/DavidSouther/3813d37375bd072f8bae.js?file=app.js"></script>
+				</div>
+				<div role="tabpanel" class="tab-pane" id="auth_index">
+					<script src="https://gist.github.com/DavidSouther/3813d37375bd072f8bae.js?file=index.html"></script>
+				</div>
+				<div role="tabpanel" class="tab-pane" id="auth_main">
+					<script src="https://gist.github.com/DavidSouther/3813d37375bd072f8bae.js?file=main.js"></script>
+				</div>
+				<div role="tabpanel" class="tab-pane" id="auth_route">
+					<script src="https://gist.github.com/DavidSouther/3813d37375bd072f8bae.js?file=route.js"></script>
+				</div>
+			</div>
+		</div>
+		<div class="col-md-4">
+			<iframe src="https://rupert-ghpages-auth.herokuapp.com/" height="275px"></iframe>
 		</div>
 	</div>
 
