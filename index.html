@@ -67,13 +67,22 @@
 				<div class="page-header">
 					<h1>Rupert<br /><small>A friendly front-edge Javascript librarian</small></h1>
 				</div>
-				<p>Rupert streamlines Single Page Application, Microservice Backed architectures. Javascript from top to bottom, your team can focus on building immersive experiences, while seamlessly orchestrating a myriad of backend services.
+
+				<p>Javasript runs on libraries. Rupert manages those libraries. You can just build things.</p>
+
+					<!-- Rupert streamlines Single Page Application, Microservice Backed architectures. -->
+
+
+
+					<!-- Javascript libraries, top to bottom. Your team can focus on building immersive experiences, while seamlessly orchestrating a myriad of backend services. Rupert handles the wiring. -->
+
 					<!-- While Rupert itself provides tools to create both SPAs and backend APIs, its flexible and powerful plugin architecture provides ways to quickly configure your client side framework, manage database connections, and integrate with numerous service providers. -->
+
 					<!-- Additionally, <a href="https://github.com/RupertJS/rupert-grunt#rupert-grunt">Rupert Grunt<a/> provides a complete testing environment for your Rupert code, and <a href="https://github.com/RupertJS/rupert-doorman#rupert-doorman">Rupert Doorman streamlines user management through third-party authentication services. -->
 				</p>
 				<div class="row">
 					<div class="col-sm-6 col-sm-offset-2">
-						<a href="https://github.com/RupertJS/rupert-grunt/raw/master/dist/vanilla.zip" class="btn btn-success btn-lg">Download Vanilla Starter</a>
+						<a id="download_vanilla" href="https://github.com/RupertJS/rupert-grunt/raw/master/dist/vanilla.zip" class="btn btn-success btn-lg">Download Vanilla Starter</a>
 					</div>
 				</div>
 			</div>
@@ -486,8 +495,27 @@ The default Angular package name is rupert-app, in ./src/client/index.jade, ./sr
   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
   })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
+	if(document.location.protocol === 'file:'){
+		window.ga = function(){console.log(arguments)};
+	}
+
   ga('create', 'UA-63934641-1', 'auto');
-  ga('send', 'pageview');
+
+  sendHash();
+	$(window).bind('hashchange', sendHash);
+	function sendHash(){
+		ga('send', 'pageview', {
+		 'page': location.pathname  + location.hash
+		});
+	}
+
+	$('a[aria-controls]').click(function(){
+		ga('send', 'event', 'tab', 'click', this.attributes['aria-controls'].value);
+	});
+
+	$('a#download_vanilla').click(function(){
+		ga('send', 'event', 'button', 'click', 'download_vanilla');
+	});
 
 </script>
 </body>
