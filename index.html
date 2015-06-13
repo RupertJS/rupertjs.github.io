@@ -498,6 +498,7 @@ The default Angular package name is rupert-app, in ./src/client/index.jade, ./sr
 	}
 
   ga('create', 'UA-63934641-1', 'auto');
+	ga('require', 'linkid', 'linkid.js');
 
   sendHash();
 	$(window).bind('hashchange', sendHash);
